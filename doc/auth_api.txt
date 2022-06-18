@@ -1,0 +1,23 @@
+- LoginUser [POST] [JSON] [/login]
+    request: 
+    {
+        "username": "felan",
+        "password": "2345567"
+    }
+        
+    response: 
+    {
+        "username": "felan",
+        "access_token": "the access token"
+    }
+
+- Verify [POST] [JSON] [/auth]
+    request:
+    {
+        "username": "felan",
+        "access_token": "the access token"
+    }
+
+    response:
+    200 OK
+    "valid"
