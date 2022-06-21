@@ -36,6 +36,8 @@ func NewServer(config config.Config, db *db.DB) (*Server, error) {
 func (server *Server) setupRouter() {
 	router := gin.Default()
 
+	router.Use(CORS())
+
 	router.POST("/login", server.loginUser)
 	router.POST("/auth", server.verify)
 
